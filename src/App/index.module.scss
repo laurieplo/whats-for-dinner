@@ -1,0 +1,40 @@
+.App {
+}
+
+.AppLogo {
+  height: 100px;
+  pointer-events: none;
+}
+
+.AppHeader {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.AppContent {
+  padding: 20px;
+}
+
+.AppButton {
+  background-color: #61dafb;
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    color: #61dafb;
+  }
+}
+
+.AppMenuItem {
+
+}
