@@ -5,7 +5,7 @@ import menuReferential from './referential'
 
 function MenuItem(props) {
     return (
-        <div className={styles.AppMenuItem}>{ props.content }</div>
+        <div className={styles.AppMenuItem} data-cy='menu-item'>{ props.content }</div>
     );
 }
 
@@ -41,6 +41,7 @@ class App extends React.Component {
                     <button
                         className={styles.AppButton}
                         onClick={() => this.generateMenu()}
+                        data-cy='action-generate-menu'
                     >
                         Générer le menu de la semaine
                     </button>
