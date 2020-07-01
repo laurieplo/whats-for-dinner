@@ -3,22 +3,13 @@ import logo from './../logo.svg';
 import styles from './index.module.scss';
 import menuReferential from './referential'
 
-function MenuItem(props) {
-    return (
-        <div className={styles.AppMenuItem} data-cy='menu-item'>{ props.content }</div>
-    );
+interface Props {}
+interface State {
+    menu: string[]
 }
 
-function Menu(props) {
-    return props.content
-        .map(item => (
-            <MenuItem content={item} />
-        )
-    );
-}
-
-class App extends React.Component {
-    constructor(props) {
+class App extends React.Component<Props, State> {
+    constructor(props: Props) {
         super(props);
         this.state = {
             menu: []
@@ -47,7 +38,9 @@ class App extends React.Component {
                     </button>
                 </header>
                 <div className={styles.AppContent}>
-                    <Menu content={this.state.menu} />
+                    { this.state.menu
+                        .map(meal => <div className={styles.AppMenuItem} data-cy='menu-item'>{ meal }</div>)
+                    }
                 </div>
             </div>
         );
