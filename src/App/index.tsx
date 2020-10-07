@@ -27,8 +27,10 @@ class App extends React.Component<Props, State> {
         return (
             <div className={styles.App}>
                 <header className={styles.AppHeader}>
-                    <img src={logo} className={styles.AppLogo} alt="logo" />
-                    <p>Bienvenue à table !</p>
+                    <div className={styles.AppLogo}>
+                        <img src={logo} className={styles.AppLogoImg} alt="logo" />
+                        <p className={styles.AppTitle}>A taaaaable !</p>
+                    </div>
                     <button
                         className={styles.AppButton}
                         onClick={() => this.generateMenu()}
