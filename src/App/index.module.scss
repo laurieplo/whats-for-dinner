@@ -1,10 +1,14 @@
-.App {
+.AppLogo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
-.AppLogo {
-  height: 100px;
+.AppLogoImg {
+  height: 75px;
+  margin-right: 20px;
   pointer-events: none;
-}
+} 
 
 .AppHeader {
   background-color: #282c34;
@@ -20,7 +24,7 @@
 }
 
 .AppButton {
-  background-color: #61dafb;
+  background-color: #282c34;
   color: white;
   padding: 20px;
   border: none;
@@ -31,10 +35,11 @@
   cursor: pointer;
   &:hover {
     background-color: white;
-    color: #61dafb;
+    color: #282c34;
   }
 }
 
-.AppMenuItem {
-
+.AppTitle {
+  font-weight: 700;
+  font-size: 24px;
 }
