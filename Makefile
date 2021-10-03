@@ -19,6 +19,7 @@ help: ## Show help
 
 install: ## Install
 	yarn
+	cp src/App/data/menuReferentialExample.ts src/App/data/menuReferential.ts
 
 ##
 ## -----------------------------
@@ -27,7 +28,7 @@ install: ## Install
 ##
 
 start: ## Run development environment
-	yarn start
+	yarn start --watch
 
 ##
 ## -----------------------------
@@ -46,4 +47,3 @@ test: ## Run cypress
 
 build: ## Build application
 	yarn build
-
