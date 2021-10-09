@@ -19,7 +19,7 @@ help: ## Show help
 
 install: ## Install
 	yarn
-	cp src/App/data/menuReferentialExample.ts src/App/data/menuReferential.ts
+	cp src/pages/Dashboard/data/menuReferentialExample.ts src/pages/Dashboard/data/menuReferential.ts
 
 ##
 ## -----------------------------
