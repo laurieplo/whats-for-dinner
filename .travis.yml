@@ -1,10 +1,15 @@
 language: node_js
 node_js:
-  - "stable"
+  - "14.18.0"
 cache:
   yarn: true
   directories:
     - node_modules
     - $HOME/.cache
-script:
-  - yarn test.cypress
+install:
+  - make install
+jobs:
+  include:
+    - stage: test
+      if: type = pull_request
+      script: yarn test.cypress
