@@ -22,7 +22,10 @@ export const header = css`
 `;
 
 export const content = css`
-    padding: 20px;
+    padding: 0 20px;
+    width: 25%;
+    display: grid;
+    grid-row-gap: 10px;
 `;
 
 export const button = css`
