@@ -3,9 +3,10 @@ describe('Homepage', () => {
         cy.visit('/');
     });
 
-    it('Generate 5 menu items', () => {
+    it('Generate menu items for lunches and dinners with 5 items each by default', () => {
+        cy.get('[data-cy=lunch-count]').should('be.visible').type('{backspace}4');
         cy.get('[data-cy=action-generate-menu]').should('be.visible').click();
-        cy.get('[data-cy=menu-item]').should('have.length', 5);
+        cy.get('[data-cy=menu-item]').should('have.length', 9);
     });
 
     it('Replace the first item', () => {
