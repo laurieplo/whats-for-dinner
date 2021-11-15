@@ -1,9 +1,10 @@
 import logo from '../../logo.svg';
 import * as styles from './Dashboard.styles';
 import { useMenuReferential } from './hooks/useMenuReferential';
+import { MenuItem } from './MenuItem';
 
 export function Dashboard() {
-    const { weekMenu, generateWeekMenu } = useMenuReferential();
+    const { weekMenu, generateWeekMenu, replaceMenuItem } = useMenuReferential();
 
     return (
         <div>
@@ -20,9 +21,9 @@ export function Dashboard() {
                     Générer le menu de la semaine
                 </button>
             </header>
-            <div className={styles.content}>
-                { weekMenu.map(meal => <div data-cy='menu-item'>{ meal }</div>)}
-            </div>
+            <ul className={styles.content}>
+                { weekMenu.map(meal => <MenuItem key={meal} label={meal} onClick={replaceMenuItem} />)}
+            </ul>
         </div>
     );
 }
