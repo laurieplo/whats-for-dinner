@@ -11,7 +11,7 @@ function excludeFrom(from: string[], toExclude: string[]) {
 
 export function useMenuReferential() {
     const [weekMenu, setWeekMenu] = useState<Array<string>>([]);
-    const generateWeekMenu = () => setWeekMenu(shuffle(menuReferential).slice(0, 5));
+    const generateWeekMenu = (size: number) => setWeekMenu(shuffle(menuReferential).slice(0, size));
     const replaceMenuItem = (label: string) => {
         const [replacedItem] = shuffle(excludeFrom(menuReferential, weekMenu));
         const weekMenuCopy = Array.from(weekMenu)
