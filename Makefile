@@ -47,3 +47,19 @@ test: ## Run cypress
 
 build: ## Build application
 	yarn build
+
+##
+## -----------------------------
+## Docker
+## -----------------------------
+##
+
+.docker/.build: .docker/Dockerfile
+	docker build -t whats-for-dinner -f .docker/Dockerfile .
+	@touch $@
+
+docker.build: .docker/.build ## Build docker image
+
+docker.run: ## Run docker
+	docker run -d -p 8000:80 whats-for-dinner
+	open http://whats-for-dinner.localhost:8000
