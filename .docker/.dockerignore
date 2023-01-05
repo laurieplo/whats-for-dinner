@@ -1,0 +1,16 @@
+/.git
+/node_modules
+
+/build
+
+/cypress.json
+/cypress
+
+/.idea
+
+/.docker
+
+Makefile
+
+# default menu
+/src/pages/Dashboard/data/menuReferential.ts
